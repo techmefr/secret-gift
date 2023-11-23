@@ -89,7 +89,7 @@ function BddTest() {
   };
 
   return (
-    <div>
+    <div className="textDoner">
       <h1>Donneurs Restants</h1>
       <input
         type="text"

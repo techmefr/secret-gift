@@ -1,31 +1,38 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import App from "./App.jsx";
-import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Snowfall from "react-snowfall";
-import Gift from "./Gift";
-
+import App from "./App";
+// page components
+import BddTest from "./BddTest";
+// router creation
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <App />,
-  },
-  {
-    path: "/gift",
-    element: <Gift />,
+    children: [
+      {
+        path: "/",
+        element: <BddTest />,
+      },
+      {
+        path: "/BddTest",
+        element: <BddTest />,
+      },
+    ],
   },
 ]);
-
+// rendering
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router}>
-      <div style={{ snowflakeCount: 200 }}>
-        <Snowfall />
-        <App />
-        <Outlet />
-      </div>
-    </RouterProvider>
-  </React.StrictMode>,
+  <>
+    <div
+      style={{
+        position: "relative",
+        width: "100vw",
+        height: "100vh",
+      }}
+    >
+      <Snowfall />
+      <RouterProvider router={router} />
+    </div>
+  </>,
   document.querySelector("#app")
 );
