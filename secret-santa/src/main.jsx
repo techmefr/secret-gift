@@ -5,15 +5,30 @@ import App from "./App.jsx";
 import "./index.css";
 import Snowfall from "react-snowfall";
 import Gift from "./Gift";
+import BddTest from "./BddTest";
+import Cadeau from "./components/cadeaux/cadeau";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <App />,
-  },
-  {
-    path: "/gift",
-    element: <Gift />,
+    children: [
+      {
+        path: "/",
+        element: <BddTest />,
+      },
+      {
+        path: "/BddTest",
+        element: <BddTest />,
+      },
+      {
+        path: "/Cadeau",
+        element: <Cadeau />,
+      },
+      {
+        path: "/gift",
+        element: <Gift />,
+      },
+    ],
   },
 ]);
 
