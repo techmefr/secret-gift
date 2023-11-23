@@ -6,7 +6,7 @@ import Snowfall from "react-snowfall";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <div style={{ snowflakeCount: 20 }}>
+    <div style={{ snowflakeCount: 50 }}>
       <Snowfall />
       <App />
     </div>
