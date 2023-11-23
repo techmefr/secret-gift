@@ -91,13 +91,22 @@ function BddTest() {
 
   return (
     <div className="textDoner">
-      <h1>Donneurs Restants</h1>
-      <input
-        type="text"
-        placeholder="Filter donors..."
-        value={filterText}
-        onChange={(e) => setFilterText(e.target.value)}
-      />
+      <h1>Qui êtes-vous?</h1>
+      <p>
+        Entrez votre prénom ou votre nom, cliquez sur ceux-ci; Puis sur le
+        bouton.
+      </p>
+      <div className="input2-group">
+        <input
+          type="text"
+          name="text"
+          className="input2"
+          placeholder="Filtre prénom et nom"
+          value={filterText}
+          onChange={(e) => setFilterText(e.target.value)}
+        />
+        <label className="user-label">Filtre</label>
+      </div>
       <ul>
         {donneursRestants.map((donneur) => (
           <li
@@ -109,10 +118,14 @@ function BddTest() {
         ))}
       </ul>
 
-      <button onClick={tirerReceveur}>Tirer un Receveur</button>
+      <button className="small-button" onClick={tirerReceveur}>
+        Tirez au sort une personne
+      </button>
       {personneTiree && <Gift personneTiree={personneTiree} />}
 
-      <button onClick={reinitialiserEtats}>Réinitialiser</button>
+      <button className="reinitializer" onClick={reinitialiserEtats}>
+        Réinitialiser
+      </button>
     </div>
   );
 }
