@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Gift from "./Gift";
+import "./gift.css";
 
 function BddTest() {
   const donneursInitiaux = [
@@ -28,6 +30,22 @@ function BddTest() {
   const [idAleatoire, setIdAleatoire] = useState(null);
   const [personneTiree, setPersonneTiree] = useState(null);
   const [donneurSelectionne, setDonneurSelectionne] = useState(null);
+  const [filterText, setFilterText] = useState("");
+
+  useEffect(() => {
+    const filteredDonneurs = donneursInitiaux
+      .filter(
+        (donneur) =>
+          `${donneur.prenom} ${donneur.nom}`
+            .toLowerCase()
+            .includes(filterText.toLowerCase()) ||
+          `${donneur.nom} ${donneur.prenom}`
+            .toLowerCase()
+            .includes(filterText.toLowerCase())
+      )
+      .slice(0, 3); // Limit the results to three persons
+    setDonneursRestants(filteredDonneurs);
+  }, [filterText, donneursInitiaux]);
 
   const genererIdAleatoire = () => {
     if (receveursRestants.length > 0) {
@@ -73,6 +91,12 @@ function BddTest() {
   return (
     <div>
       <h1>Donneurs Restants</h1>
+      <input
+        type="text"
+        placeholder="Filter donors..."
+        value={filterText}
+        onChange={(e) => setFilterText(e.target.value)}
+      />
       <ul>
         {donneursRestants.map((donneur) => (
           <li
@@ -84,29 +108,8 @@ function BddTest() {
         ))}
       </ul>
 
-      <h1>Donneurs Finis</h1>
-      <ul>
-        {donneursFinis.map((donneur) => (
-          <li key={donneur.id}>{`${donneur.prenom} ${donneur.nom}`}</li>
-        ))}
-      </ul>
-
-      <h1>Receveurs Restants</h1>
-      <ul>
-        {receveursRestants.map((receveur) => (
-          <li key={receveur.id}>{`${receveur.prenom} ${receveur.nom}`}</li>
-        ))}
-      </ul>
-
-      <h1>Receveurs Finis</h1>
-      <ul>
-        {receveursFinis.map((receveur) => (
-          <li key={receveur.id}>{`${receveur.prenom} ${receveur.nom}`}</li>
-        ))}
-      </ul>
-
       <button onClick={tirerReceveur}>Tirer un Receveur</button>
-      {personneTiree && <p>Personne tirée : {personneTiree}</p>}
+      {personneTiree && <Gift personneTiree={personneTiree} />}
 
       <button onClick={reinitialiserEtats}>Réinitialiser</button>
     </div>
