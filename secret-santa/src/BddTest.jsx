@@ -9,9 +9,6 @@ function BddTest() {
     { id: 5, prenom: "Eva", nom: "Garcia" },
     { id: 6, prenom: "Frank", nom: "Brown" },
     { id: 7, prenom: "Grace", nom: "Davis" },
-    { id: 8, prenom: "Hector", nom: "Rodriguez" },
-    { id: 9, prenom: "Ivy", nom: "Wang" },
-    { id: 10, prenom: "Jack", nom: "Taylor" },
   ];
 
   const receveursInitiaux = [
@@ -22,9 +19,6 @@ function BddTest() {
     { id: 5, prenom: "Eva", nom: "Garcia" },
     { id: 6, prenom: "Frank", nom: "Brown" },
     { id: 7, prenom: "Grace", nom: "Davis" },
-    { id: 8, prenom: "Hector", nom: "Rodriguez" },
-    { id: 9, prenom: "Ivy", nom: "Wang" },
-    { id: 10, prenom: "Jack", nom: "Taylor" },
   ];
 
   const [donneursRestants, setDonneursRestants] = useState(donneursInitiaux);
@@ -32,10 +26,19 @@ function BddTest() {
   const [receveursRestants, setReceveursRestants] = useState(receveursInitiaux);
   const [receveursFinis, setReceveursFinis] = useState([]);
   const [idAleatoire, setIdAleatoire] = useState(null);
+  const [personneTiree, setPersonneTiree] = useState(null);
+  const [donneurSelectionne, setDonneurSelectionne] = useState(null);
 
   const genererIdAleatoire = () => {
     if (receveursRestants.length > 0) {
-      const id = Math.floor(Math.random() * receveursRestants.length);
+      let id;
+      do {
+        id = Math.floor(Math.random() * receveursRestants.length);
+      } while (
+        donneurSelectionne &&
+        donneurSelectionne.id === receveursRestants[id].id
+      );
+      setDonneurSelectionne(receveursRestants[id]);
       setIdAleatoire(id);
     }
   };
@@ -47,12 +50,16 @@ function BddTest() {
   };
 
   const tirerReceveur = () => {
-    const receveurTire = receveursRestants[idAleatoire];
-    setReceveursRestants(
-      receveursRestants.filter((r) => r.id !== receveurTire.id)
-    );
-    setReceveursFinis([...receveursFinis, receveurTire]);
-    genererIdAleatoire();
+    if (receveursRestants.length > 0 && idAleatoire !== null) {
+      const receveurTire = receveursRestants[idAleatoire];
+      setReceveursRestants(
+        receveursRestants.filter((r) => r.id !== receveurTire.id)
+      );
+      setReceveursFinis([...receveursFinis, receveurTire]);
+      genererIdAleatoire();
+
+      setPersonneTiree(`${receveurTire.prenom} ${receveurTire.nom}`);
+    }
   };
 
   const reinitialiserEtats = () => {
@@ -99,6 +106,8 @@ function BddTest() {
       </ul>
 
       <button onClick={tirerReceveur}>Tirer un Receveur</button>
+      {personneTiree && <p>Personne tirée : {personneTiree}</p>}
+
       <button onClick={reinitialiserEtats}>Réinitialiser</button>
     </div>
   );
