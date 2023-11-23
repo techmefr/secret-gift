@@ -1,4 +1,3 @@
-
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -8,8 +7,6 @@ import BddTest from "./BddTest";
 import Cadeau from "./components/cadeaux/cadeau";
 // router creation
 
-
-
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -17,7 +14,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <BddTest />,
-       
       },
       {
         path: "/BddTest",
@@ -27,13 +23,12 @@ const router = createBrowserRouter([
         path: "/Cadeau",
         element: <Cadeau />,
       },
-    
     ],
-  }
+  },
 ]);
 
 // rendering
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
-
+);
