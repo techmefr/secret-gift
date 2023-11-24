@@ -22,17 +22,19 @@ const router = createBrowserRouter([
 ]);
 // rendering
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <>
-    <div
-      style={{
-        position: "relative",
-        width: "100vw",
-        height: "100vh",
-      }}
-    >
-      <Snowfall />
-      <RouterProvider router={router} />
-    </div>
-  </>,
+  <div
+    style={{
+      width: "100vh",
+      height: "100vh",
+    }}
+  >
+    <Snowfall
+      snowflakeCount={400}
+      rotationSpeed={[2, 5]}
+      speed={[1, 3]}
+      wind={[-0.5, 2]}
+    />
+    <RouterProvider router={router} />
+  </div>,
   document.querySelector("#app")
 );
