@@ -69,7 +69,7 @@ const UserId = () => {
     <div className="login-container">
       {!loggedInUser ? (
         <>
-          <h1>Inscription</h1>
+          <h1>Sign Up</h1>
           <input
             className="input-login"
             type="text"
@@ -77,13 +77,7 @@ const UserId = () => {
             value={newUsername}
             onChange={(e) => setNewUsername(e.target.value)}
           />
-           <input
-            className="input-login"
-            type="text"
-            placeholder="Last Name"
-            value={newUsername}
-            onChange={(e) => setNewUsername(e.target.value)}
-          />
+         
           <input
             className="input-login"
             type="password"
@@ -91,9 +85,9 @@ const UserId = () => {
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
           />
-          <button className="connecter" onClick={handleSignUp}>S'inscrire</button>
+          <button className="connecter" onClick={handleSignUp}>Sign up</button>
 
-          <h1>Connexion</h1>
+          <h1>log in</h1>
           <input
             className="input-login"
             type="text"
@@ -109,14 +103,14 @@ const UserId = () => {
             onChange={(e) => setSignInPassword(e.target.value)}
           />
           <button className="connecter" onClick={handleSignIn}>
-            Se connecter
+          log in
           </button>
         </>
       ) : (
         <>
-          <h1>Bienvenue, {loggedInUser}!</h1>
+          <h1>Wellcome, {loggedInUser}!</h1>
           <button className="deconnecter" onClick={handleSignOut}>
-            Se déconnecter
+            Log Out
           </button>
         </>
       )}

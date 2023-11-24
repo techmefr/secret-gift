@@ -10,7 +10,6 @@ import EventCalendar from "./components/EventCalendar/EventCalendar";
 import UserId from "./components/UserID/UserId";
 import Movies from "./components/Movies/Movies";
 
-
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -19,16 +18,12 @@ const router = createBrowserRouter([
         path: "/",
         element: <BddTest />,
       },
-      {
-        path: "/BddTest",
-        element: <BddTest />,
-      },
+
       {
         path: "/Cadeau",
         element: <Cadeau />,
       },
       {
-
         path: "/Movies",
         element: <Movies />,
       },
@@ -40,20 +35,19 @@ const router = createBrowserRouter([
         path: "/EventCalendar",
         element: <EventCalendar />,
       },
-    
-
- 
-
     ],
   },
 ]);
 // rendering
 ReactDOM.createRoot(document.getElementById("root")).render(
-
   <div
     style={{
+<<<<<<< HEAD
       
       width: "100vh",
+=======
+      width: "",
+>>>>>>> 5d5e35fb0058997ded4ae3afc5bc3dbe8acf4c61
       height: "100vh",
     }}
   >
@@ -67,4 +61,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   </div>,
   document.querySelector("#app")
 );
-

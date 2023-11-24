@@ -13,7 +13,17 @@
     width: 80%;
     margin-left: 2.5rem;
 }
-
+.update-event{
+    text-decoration: none;
+    color: rgb(215, 4, 102);
+    font-size: x-large;
+}
+.update-event{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
 
 .list-evenement{
    /*margin-top: 8rem;*/
@@ -111,6 +121,7 @@ margin: 1rem;
 }
 .Delete{
     display: inline-block;
+    margin: 1rem;
     outline: 0;
     cursor: pointer;
     padding: 5px 16px;
@@ -134,6 +145,7 @@ margin: 1rem;
 
 }
 .Update{
+    height: 2rem;
     display: inline-block;
     outline: 0;
     cursor: pointer;

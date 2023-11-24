@@ -1,10 +1,10 @@
-.container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .card-container {
   display: flex;
@@ -56,6 +56,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: white;
 }
   
 .card-back {
@@ -68,15 +69,19 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
   }
 h1{
-  color: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+  color:  rgb(230, 30, 77);
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 h4{
     color: red;
     margin-top: 14rem;
     margin-right: 10rem;
   }
+
 
 .info-card-back{
     width: 100%;
@@ -85,27 +90,42 @@ h4{
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    background-color:green;
+    background-color:#008000;
+}
 
-  }
-.card-price{
-        color: white;
-        margin: 0;
-        margin-left: .5rem;
-    }
-.card-link{
-    font-weight: 500;
-    color: white;
-    text-decoration: inherit;
-    margin-left: .5rem;
+.info-card-back {
+  width: 100%;
+  height: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  background-color: green;
+}
+.card-price {
+  color: white;
+  margin: 0;
+  margin-left: 0.5rem;
+}
+.card-link {
+  font-weight: 500;
+  color: white;
+  text-decoration: inherit;
+  margin-left: 0.5rem;
+}
+.card-link:hover {
+  color: blue;
+}
 
-  }
-  .card-link:hover {
-    color: blue;
-  }
- 
-.card-title{
-    color: green;
-    font-size: 1.2em;
-    line-height: 1.1;
+.card-title {
+  color: green;
+  font-size: 1.2em;
+  line-height: 1.1;
+}
+
+.card-front {
+  background-color: white;
+}
+.card-back {
+  background-color: white;
 }
