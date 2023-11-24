@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./cadeau.css"; 
+import "./cadeau.css";
 import Agende from "../cadeaux/image/Agenda.jpg";
 import cassetête from "../cadeaux/image/casse-tête.jpg";
 import gantstactiles from "../cadeaux/image/gants-tactiles.jpg";
@@ -11,7 +11,7 @@ import puzzle from "../cadeaux/image/puzzle.jpeg";
 import console from "../cadeaux/image/console.jpg";
 import bonsais from "../cadeaux/image/bonsais.jpeg";
 import réveil from "./image/réveil.jpeg";
-import  boxséjour from "./image/box-séjour.jpeg";
+import boxséjour from "./image/box-séjour.jpeg";
 
 function Cadeau() {
   const cardsData = [
@@ -76,17 +76,17 @@ function Cadeau() {
       price: "304,33€",
     },
     {
-        title: "Réveil Multifonctionnel",
-        image: réveil,
-        link: "https://www.amazon.fr/COLSUR-Chargement-Multifonctionnel-Bluetooth-Affichage/dp/B0B65QBFY7/ref=sr_1_2_sspa?__mk_fr_FR=ÅMÅŽÕÑ&crid=132XZPIX9U9KG&keywords=réveil%2Baux%2Bsons%2Bde%2Bla%2Bnature&qid=1700749611&sprefix=réveil%2Baux%2Bsons%2Bde%2Bla%2Bnature%2Caps%2C157&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1",
-        price: "50,39€",
-      },
-      {
-        title: "Console Nintendo Switch",
-        image: boxséjour,
-        link: "https://www.amazon.fr/SMARTBOX-Valentin-original-dexception-romantique/dp/B07WNHCPJV/ref=sr_1_3_sspa?__mk_fr_FR=ÅMÅŽÕÑ&crid=2PC1GWQPFYV3H&keywords=une%2Bbox%2Bséjour&qid=1700749953&sprefix=une%2Bbox%2Bséjour%2Caps%2C172&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1",
-        price: "119,90€",
-      },
+      title: "Réveil Multifonctionnel",
+      image: réveil,
+      link: "https://www.amazon.fr/COLSUR-Chargement-Multifonctionnel-Bluetooth-Affichage/dp/B0B65QBFY7/ref=sr_1_2_sspa?__mk_fr_FR=ÅMÅŽÕÑ&crid=132XZPIX9U9KG&keywords=réveil%2Baux%2Bsons%2Bde%2Bla%2Bnature&qid=1700749611&sprefix=réveil%2Baux%2Bsons%2Bde%2Bla%2Bnature%2Caps%2C157&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1",
+      price: "50,39€",
+    },
+    {
+      title: "Console Nintendo Switch",
+      image: boxséjour,
+      link: "https://www.amazon.fr/SMARTBOX-Valentin-original-dexception-romantique/dp/B07WNHCPJV/ref=sr_1_3_sspa?__mk_fr_FR=ÅMÅŽÕÑ&crid=2PC1GWQPFYV3H&keywords=une%2Bbox%2Bséjour&qid=1700749953&sprefix=une%2Bbox%2Bséjour%2Caps%2C172&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1",
+      price: "119,90€",
+    },
     // ... Ajoutez les données pour les autres cadeaux
   ];
 
@@ -118,9 +118,9 @@ function Cadeau() {
                 className="card-back"
                 style={{ backgroundImage: `url(${card.image})` }}
               >
+                <h3 className="card-title">{card.title}</h3>
                 <div className="card-back"></div>
                 <div className="info-card-back">
-                  <h3 className="card-title">{card.title}</h3>
                   <p className="card-price">Price: {card.price}</p>
                   <a
                     className="card-link"
@@ -128,7 +128,7 @@ function Cadeau() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    More Info
+                    BUY NOW 🛒
                   </a>
                 </div>
               </div>

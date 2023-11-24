@@ -1,10 +1,16 @@
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Snowfall from "react-snowfall";
+
 import App from "./App";
 import BddTest from "./BddTest";
 import BddTest from "./BddTest";
 import Cadeau from "./components/cadeaux/cadeau";
+
+import EventCalendar from "./components/EventCalendar/EventCalendar";
+import UserId from "./components/UserID/UserId";
+import Movies from "./components/Movies/Movies";
+
 
 const router = createBrowserRouter([
   {
@@ -23,14 +29,28 @@ const router = createBrowserRouter([
         element: <Cadeau />,
       },
       {
-        path: "/gift",
-        element: <Gift />,
+
+        path: "/Movies",
+        element: <Movies />,
       },
+      {
+        path: "/UserId",
+        element: <UserId />,
+      },
+      {
+        path: "/EventCalendar",
+        element: <EventCalendar />,
+      },
+    
+
+ 
+
     ],
   },
 ]);
 // rendering
 ReactDOM.createRoot(document.getElementById("root")).render(
+
   <div
     style={{
       width: "100vh",
@@ -47,3 +67,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   </div>,
   document.querySelector("#app")
 );
+

@@ -1,8 +1,16 @@
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0 ;
+  padding: 0;
   text-align: center;
+}
+.img-event{
+  width: 100%;
+  height: 15rem;
+  background-image: url(../src/components/cadeaux/image/back.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .logo {
@@ -19,7 +27,7 @@
 }
 
 nav{
-  background-color: red;
+  background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
   height: 4rem;
   width: 100%;
   display: flex ;
@@ -30,7 +38,7 @@ nav{
 
 }
 
-a{
+.a-nav{
   display: block;
   position:relative;
   text-decoration:none;
@@ -42,7 +50,7 @@ a{
   transition:0.5s;
 }
 
- a:hover{
+ .a-nav:hover{
   transform:scale(2);
   opacity:1;
   filter:blur(0);
@@ -50,7 +58,7 @@ a{
   color:#fff;
 }
 
- a:before{
+ .a-nav:before{
   content:'';
   position:absolute;
   top:0;
@@ -63,7 +71,7 @@ a{
   z-index:-1;
 }
 
- a:hover:before{
+ .a-nav:hover:before{
   transition:transform 0.5s;
   transform-origin:left;
   transform:scaleX(1);
@@ -82,10 +90,6 @@ a{
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
 }
 
 .read-the-docs {
