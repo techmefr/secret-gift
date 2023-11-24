@@ -2,9 +2,10 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Snowfall from "react-snowfall";
 import App from "./App";
-// page components
 import BddTest from "./BddTest";
-// router creation
+import BddTest from "./BddTest";
+import Cadeau from "./components/cadeaux/cadeau";
+
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -16,6 +17,14 @@ const router = createBrowserRouter([
       {
         path: "/BddTest",
         element: <BddTest />,
+      },
+      {
+        path: "/Cadeau",
+        element: <Cadeau />,
+      },
+      {
+        path: "/gift",
+        element: <Gift />,
       },
     ],
   },
