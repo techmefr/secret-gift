@@ -65,25 +65,26 @@ body {
 .box::before {
   gap: 10px;
   content: "";
-  width: 500px;
-  height: 500px;
+  width: 550px;
+  height: 550px;
   background-color: rgb(54, 54, 238);
   position: absolute;
   z-index: 1;
-  top: 40%;
+  top: 60%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
 .box-body {
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   height: 200px;
   width: 200px;
-  margin-top: 123.3333333333px;
+  margin-top: -285px;
   background-color: #cc231e;
   border-bottom-left-radius: 5%;
   border-bottom-right-radius: 5%;

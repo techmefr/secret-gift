@@ -1,5 +1,6 @@
 html,
-body {
+body,
+root {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -22,7 +23,7 @@ ul li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 300px;
+  margin-top: 3px;
 }
 
 .input2-group {
