@@ -5,23 +5,37 @@ import "./bddTesst.css";
 
 function BddTest() {
   const donneursInitiaux = [
-    { id: 1, prenom: "Alice", nom: "Dupont" },
-    { id: 2, prenom: "Bob", nom: "Martin" },
-    { id: 3, prenom: "Charlie", nom: "Smith" },
-    { id: 4, prenom: "David", nom: "Johnson" },
-    { id: 5, prenom: "Eva", nom: "Garcia" },
-    { id: 6, prenom: "Frank", nom: "Brown" },
-    { id: 7, prenom: "Grace", nom: "Davis" },
+    { id: 1, prenom: "Amina", nom: "Dupont" },
+    { id: 2, prenom: "Victor", nom: "Zanote" },
+    { id: 3, prenom: "Matthieu", nom: "Lopez" },
+    { id: 4, prenom: "Sharmake", nom: "Awil" },
+    { id: 5, prenom: "Benjamin", nom: "Richard" },
+    { id: 6, prenom: "Axel", nom: "Laress" },
+    { id: 7, prenom: "Celine", nom: "Baille" },
+    { id: 8, prenom: "Elina", nom: "Todorova" },
+    { id: 9, prenom: "Messaoud", nom: "Zouggab" },
+    { id: 10, prenom: "Patrick", nom: "Hoang" },
+    { id: 11, prenom: "Christoper", nom: "Arnaud" },
+    { id: 12, prenom: "Nasreddine", nom: "Lamamra" },
+    { id: 13, prenom: "Alexis", nom: "Liénard" },
+    { id: 14, prenom: "Cedric", nom: "Front" },
   ];
 
   const receveursInitiaux = [
-    { id: 1, prenom: "Alice", nom: "Dupont" },
-    { id: 2, prenom: "Bob", nom: "Martin" },
-    { id: 3, prenom: "Charlie", nom: "Smith" },
-    { id: 4, prenom: "David", nom: "Johnson" },
-    { id: 5, prenom: "Eva", nom: "Garcia" },
-    { id: 6, prenom: "Frank", nom: "Brown" },
-    { id: 7, prenom: "Grace", nom: "Davis" },
+    { id: 1, prenom: "Amina", nom: "Dupont" },
+    { id: 2, prenom: "Victor", nom: "Zanote" },
+    { id: 3, prenom: "Matthieu", nom: "Lopez" },
+    { id: 4, prenom: "Sharmake", nom: "Awil" },
+    { id: 5, prenom: "Benjamin", nom: "Richard" },
+    { id: 6, prenom: "Axel", nom: "Laress" },
+    { id: 7, prenom: "Celine", nom: "Baille" },
+    { id: 8, prenom: "Elina", nom: "Todorova" },
+    { id: 9, prenom: "Messaoud", nom: "Zouggab" },
+    { id: 10, prenom: "Patrick", nom: "Hoang" },
+    { id: 11, prenom: "Christoper", nom: "Arnaud" },
+    { id: 12, prenom: "Nasreddine", nom: "Lamamra" },
+    { id: 13, prenom: "Alexis", nom: "Liénard" },
+    { id: 14, prenom: "Cedric", nom: "Front" },
   ];
 
   const [donneursRestants, setDonneursRestants] = useState(donneursInitiaux);

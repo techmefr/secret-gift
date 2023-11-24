@@ -67,7 +67,7 @@ body {
   content: "";
   width: 550px;
   height: 550px;
-  background-color: rgb(54, 54, 238);
+  background-color: #1c3d2a;
   position: absolute;
   z-index: 1;
   top: 60%;
