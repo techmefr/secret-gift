@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Gift from "./Gift";
 import "./gift.css";
+import "./bddTesst.css";
 
 function BddTest() {
   const donneursInitiaux = [
@@ -62,6 +63,7 @@ function BddTest() {
   };
 
   const deplacerDonneurVersFinis = (donneur) => {
+    setDonneurSelectionne(donneur);
     setDonneursRestants(donneursRestants.filter((d) => d.id !== donneur.id));
     setDonneursFinis([donneur, ...donneursFinis]);
     genererIdAleatoire();
@@ -89,29 +91,50 @@ function BddTest() {
   };
 
   return (
-    <div>
-      <h1>Donneurs Restants</h1>
-      <input
-        type="text"
-        placeholder="Filter donors..."
-        value={filterText}
-        onChange={(e) => setFilterText(e.target.value)}
-      />
+    <div className="textDoner">
+      <h1>Qui êtes-vous?</h1>
+      <p>Entrez votre prénom ou votre nom, cliquez sur votre nom</p>
+      <div className="input2-group">
+        <input
+          type="text"
+          name="text"
+          className="input2"
+          placeholder="Filtre prénom et nom"
+          value={filterText}
+          onChange={(e) => setFilterText(e.target.value)}
+        />
+        <label className="user-label">Filtre</label>
+      </div>
       <ul>
         {donneursRestants.map((donneur) => (
           <li
             key={donneur.id}
             onClick={() => deplacerDonneurVersFinis(donneur)}
+            className={
+              donneurSelectionne && donneurSelectionne.id === donneur.id
+                ? "selected"
+                : ""
+            }
           >
             {`${donneur.prenom} ${donneur.nom}`}
           </li>
         ))}
       </ul>
 
-      <button onClick={tirerReceveur}>Tirer un Receveur</button>
+      <button className="button" onClick={tirerReceveur}>
+        Tirez au sort une personne
+      </button>
       {personneTiree && <Gift personneTiree={personneTiree} />}
 
-      <button onClick={reinitialiserEtats}>Réinitialiser</button>
+      <button
+        className="reinitializer"
+        onClick={() => {
+          reinitialiserEtats();
+          window.location.reload();
+        }}
+      >
+        Réinitialiser
+      </button>
     </div>
   );
 }
