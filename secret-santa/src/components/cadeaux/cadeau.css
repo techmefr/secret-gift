@@ -15,48 +15,50 @@
   row-gap: 34px;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  }
+  
+  .card {
+    perspective: 1000px;
+    width: 18rem;
+    height: 25rem;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    padding: 1rem;
+  
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+  
+  .card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url(./cadeau.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
 }
-
-.card {
-  perspective: 1000px;
-  width: 18rem;
-  height: 25rem;
-  position: relative;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
-  padding: 1rem;
-}
-
-.card-inner {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s;
-  transform-style: preserve-3d;
-}
-
-.card.flipped .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-image: url(./cadeau.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
+  
 .card-back {
   transform: rotateY(180deg);
   background-size: contain;
@@ -67,20 +69,19 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
+  }
+h1{
+  color:  rgb(230, 30, 77);
+  font-size: 3.2em;
+  line-height: 1.1;
 }
-h1 {
-  color: linear-gradient(
-    to right,
-    rgb(230, 30, 77) 0%,
-    rgb(227, 28, 95) 50%,
-    rgb(215, 4, 102) 100%
-  );
-}
-h4 {
-  color: red;
-  margin-top: 14rem;
-  margin-right: 10rem;
-}
+h4{
+    color: red;
+    margin-top: 14rem;
+    margin-right: 10rem;
+  }
+
 
 .info-card-back {
   width: 100%;

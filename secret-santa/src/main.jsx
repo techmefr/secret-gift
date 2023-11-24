@@ -42,7 +42,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <div
     style={{
-      width: "100vh",
+      width: "",
       height: "100vh",
     }}
   >
