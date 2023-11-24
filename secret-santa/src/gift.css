@@ -1,24 +1,85 @@
 body {
-  background: black;
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  background: hsl(0, 0%, 20%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.whiteCard {
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 3s ease-in-out, transform 2s ease-in-out;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.box-body:hover .whiteCard {
+  opacity: 1;
+  transform: translate(-50%, -165%);
+}
+.col12 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contain2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .box {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .box::before {
+  gap: 10px;
   content: "";
-  width: 440px;
-  height: 440px;
-  background-color: #89cff0;
+  width: 500px;
+  height: 500px;
+  background-color: rgb(54, 54, 238);
   position: absolute;
-  z-index: -1;
-  top: 50%;
+  z-index: 1;
+  top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
 .box-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   height: 200px;
   width: 200px;
@@ -41,6 +102,7 @@ body {
   -webkit-animation: box-body 1s forwards ease-in-out;
   animation: box-body 1s forwards ease-in-out;
 }
+
 .box-body:hover .img {
   opacity: 1;
   z-index: 0;
@@ -248,4 +310,7 @@ body {
     -webkit-transform: translateX(-100%) rotate(0deg) skew(10deg, 10deg);
     transform: translateX(-100%) rotate(0deg) skew(10deg, 10deg);
   }
+}
+.nameReceiver {
+  color: #cc231e;
 }
