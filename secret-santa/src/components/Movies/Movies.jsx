@@ -7,7 +7,7 @@ function Movies() {
   const [moviesList, setMoviesList] = useState([]);
 
   const getMovie = () => {
-    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query= Noël`)
+    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=Noël`)
       .then((res) => res.json())
       .then((json) => setMoviesList(json.results));
   };
