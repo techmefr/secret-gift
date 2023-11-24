@@ -4,7 +4,6 @@ import Snowfall from "react-snowfall";
 
 import App from "./App";
 import BddTest from "./BddTest";
-import BddTest from "./BddTest";
 import Cadeau from "./components/cadeaux/cadeau";
 
 import EventCalendar from "./components/EventCalendar/EventCalendar";
