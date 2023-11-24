@@ -1,19 +1,16 @@
-
 #root {
-  margin: 0 ;
+  margin: 0;
   padding: 0;
   text-align: center;
   width: 100%;
 }
-.img-event{
-  width: 100%;
+.img-event {
   height: 15rem;
   background-image: url(../src/components/cadeaux/image/back.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -25,57 +22,6 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-nav{
-  background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
-  height: 4rem;
-  width: 100%;
-  display: flex ;
-  align-items: center;
-  justify-content: space-evenly;
-  text-decoration: none;
-  font-size: larger;
-
-}
-
-.a-nav{
-  display: block;
-  position:relative;
-  text-decoration:none;
-  padding:5px;
-  font-size:18px;
-  font-family: sans-serif;
-  color:#fff;
-  text-transform:uppercase;
-  transition:0.5s;
-}
-
- .a-nav:hover{
-  transform:scale(2);
-  opacity:1;
-  filter:blur(0);
-  text-decoration:none;
-  color:#fff;
-}
-
- .a-nav:before{
-  content:'';
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  transition:0.5s;
-  transform-origin:right;
-  transform:scaleX(0);
-  z-index:-1;
-}
-
- .a-nav:hover:before{
-  transition:transform 0.5s;
-  transform-origin:left;
-  transform:scaleX(1);
 }
 
 @keyframes logo-spin {
@@ -93,7 +39,66 @@ nav{
   }
 }
 
+.card {
+  padding: 2em;
+}
+
 .read-the-docs {
   color: #888;
+}
+
+nav {
+  background: linear-gradient(
+    to right,
+    rgb(230, 30, 77) 0%,
+    rgb(227, 28, 95) 50%,
+    rgb(215, 4, 102) 100%
+  );
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-decoration: none;
+  font-size: larger;
+}
+
+.a-nav {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.a-nav:hover {
+  transform: scale(2);
+  opacity: 1;
+  filter: blur(0);
+  text-decoration: none;
+  color: #fff;
+}
+
+.a-nav:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+.a-nav:hover:before {
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
 }
 

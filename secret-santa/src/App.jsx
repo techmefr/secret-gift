@@ -14,16 +14,16 @@ function App() {
           Gift Ideas
         </Link>
         <Link className="a-nav" to="/Movies">
-        Christmas Movies
+          Christmas Movies
         </Link>
         <Link className="a-nav" to="/EventCalendar">
-        Event Calendar
+          Event Calendar
         </Link>
         <Link className="a-nav" to="/UserId">
-        Login
+          Login
         </Link>
       </nav>
-      <div className='img-event'/>
+      <div className="img-event" />
       <main>
         <Outlet />
       </main>
