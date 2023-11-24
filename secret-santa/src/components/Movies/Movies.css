@@ -11,27 +11,23 @@
   padding: 5px;
 }
 
-.container-movie {
-  flex-wrap: wrap;
-  margin: 1rem;
-  background: linear-gradient(
-    to right,
-    rgb(230, 30, 77) 0%,
-    rgb(227, 28, 95) 50%,
-    rgb(215, 4, 102) 100%
-  );
-  border-radius: 10px;
-  box-sizing: border-box;
-  overflow: hidden;
-  box-shadow: 5px 5px 10px 1px gainsboro;
-  animation: myAnim 1s ease 0s 1 normal forwards;
-  position: relative;
-  border-color: #009efa 3px;
-  height: 37rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+.container-movie{
+    flex-wrap: wrap;
+    margin: 1rem;
+    background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 1px rgb(7, 7, 7);
+    animation: myAnim 1s ease 0s 1 normal forwards;
+    position: relative;
+    border-color: #009EFA 3px;
+    height: 33rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 @keyframes myAnim {
@@ -51,14 +47,14 @@
   border-radius: 10px;
   margin: 1vh;
 }
-.title-movie {
-  font-size: 1rem;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  color: #00d2fc;
-  font-style: oblique;
-  font-weight: bolder;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+.title-movie{
+    font-size: 1rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: whitesmoke;
+    font-style: oblique;
+    font-weight: bolder;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.1);
+
 }
 .date-movie {
   margin: 0;
@@ -68,18 +64,22 @@
   margin: 0;
   font-size: 0.8rem;
 }
-.rating-movie {
-  margin: 0;
-  margin-bottom: 15px;
-  background-color: #f3bb00;
-  width: 2rem;
-  height: 1rem;
-  border-radius: 10px;
-  position: absolute;
-  top: 25px;
-  right: 0;
-  margin: 0;
-  transform: translate(-100%, 0);
+<<<<<<< HEAD
+.rating-movie{
+    margin: 0;
+    margin-bottom: 15px;
+    background-color: #f3bb00;
+    width: 2rem;
+    height: 1rem;
+    border-radius: 10px;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    margin: 0;
+    transform: translate(-100%, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .movie-info {
   display: flex;
@@ -125,3 +125,16 @@
   text-decoration: none;
   margin-top: 2rem;
 }
+.play-trailer-button{
+    color: red;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13rem;
+    height: 2rem;
+    text-decoration: none;
+    margin-top: 2rem;
+}
+

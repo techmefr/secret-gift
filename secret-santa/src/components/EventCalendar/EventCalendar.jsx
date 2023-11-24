@@ -93,7 +93,7 @@ const handleEditEvent = (date) => {
                   {/* Ajoutez le formulaire d'édition ici */}
                   {selectedEvent && (
                       <div className='edit-event'>
-                          <h3>Modifier l'événement du {selectedEvent.date}</h3>
+                          <h3 className='update-event'>Up date your event here : {selectedEvent.date}</h3>
                           <input
                               className='input-update'
                               type="text"
