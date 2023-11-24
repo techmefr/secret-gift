@@ -63,6 +63,7 @@ function BddTest() {
   };
 
   const deplacerDonneurVersFinis = (donneur) => {
+    setDonneurSelectionne(donneur);
     setDonneursRestants(donneursRestants.filter((d) => d.id !== donneur.id));
     setDonneursFinis([donneur, ...donneursFinis]);
     genererIdAleatoire();
@@ -92,10 +93,7 @@ function BddTest() {
   return (
     <div className="textDoner">
       <h1>Qui êtes-vous?</h1>
-      <p>
-        Entrez votre prénom ou votre nom, cliquez sur ceux-ci; Puis sur le
-        bouton.
-      </p>
+      <p>Entrez votre prénom ou votre nom, cliquez sur votre nom</p>
       <div className="input2-group">
         <input
           type="text"
@@ -112,18 +110,29 @@ function BddTest() {
           <li
             key={donneur.id}
             onClick={() => deplacerDonneurVersFinis(donneur)}
+            className={
+              donneurSelectionne && donneurSelectionne.id === donneur.id
+                ? "selected"
+                : ""
+            }
           >
             {`${donneur.prenom} ${donneur.nom}`}
           </li>
         ))}
       </ul>
 
-      <button className="small-button" onClick={tirerReceveur}>
+      <button className="button" onClick={tirerReceveur}>
         Tirez au sort une personne
       </button>
       {personneTiree && <Gift personneTiree={personneTiree} />}
 
-      <button className="reinitializer" onClick={reinitialiserEtats}>
+      <button
+        className="reinitializer"
+        onClick={() => {
+          reinitialiserEtats();
+          window.location.reload();
+        }}
+      >
         Réinitialiser
       </button>
     </div>
