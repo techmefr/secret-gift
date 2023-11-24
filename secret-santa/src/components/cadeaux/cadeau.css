@@ -56,6 +56,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: white;
 }
   
 .card-back {
@@ -68,9 +69,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
   }
 h1{
-  color: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+  color:  rgb(230, 30, 77);
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 h4{
     color: red;

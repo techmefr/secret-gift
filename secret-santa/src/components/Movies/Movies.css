@@ -19,7 +19,7 @@
     border-radius: 10px;
     box-sizing: border-box;
     overflow: hidden;
-    box-shadow: 5px 5px 10px 1px gainsboro;
+    box-shadow: 5px 5px 10px 1px rgb(7, 7, 7);
     animation: myAnim 1s ease 0s 1 normal forwards;
     position: relative;
     border-color: #009EFA 3px;

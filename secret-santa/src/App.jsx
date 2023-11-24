@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <nav>
-        <Link className="a-nav" to="/BddTest">
+        <Link className="a-nav" to="/">
           Home
         </Link>
         <Link className="a-nav" to="/Cadeau">
