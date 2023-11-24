@@ -1,26 +1,31 @@
 .container{
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 4 colonnes dans cet exemple */
-    gap: 5px;
-    align-items: center;
-    justify-content: center;
-    margin: 3rem;
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  column-gap: 33px;
+  row-gap: 34px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   }
   
   .card {
     perspective: 1000px;
-    width: 20rem;
-    height: 20rem;
+    width: 18rem;
+    height: 25rem;
     position: relative;
     cursor: pointer;
     transform-style: preserve-3d;
     transition: transform 0.5s;
+    padding: 1rem;
   
   }
   
@@ -54,26 +59,33 @@
 }
   
 .card-back {
-    transform: rotateY(180deg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  transform: rotateY(180deg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   }
 h1{
-    color: red;
-  }
+  color: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+}
 h4{
     color: red;
-    margin-top: 12rem;
+    margin-top: 14rem;
+    margin-right: 10rem;
   }
 
 .info-card-back{
     width: 100%;
+    height: 1.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    background-color:red;
+    background-color:green;
 
   }
 .card-price{
@@ -91,13 +103,9 @@ h4{
   .card-link:hover {
     color: blue;
   }
-  .card-link:hover:hover:before{
-    transition:transform 0.5s;
-    transform-origin:left;
-    transform:scaleX(1);
-  }
+ 
 .card-title{
-    color: white;
+    color: green;
     font-size: 1.2em;
     line-height: 1.1;
 }
