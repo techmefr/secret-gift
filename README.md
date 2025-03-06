@@ -28,7 +28,7 @@ Une application festive en React construite lors d'un hackathon d'une journée a
 
 1. Clonez ce dépôt
 ```bash
-git clone https://github.com/votreutilisateur/secret-gift.git
+git clone git@github.com:techmefr/secret-gift.git
 cd secret-gift
 ```
 
